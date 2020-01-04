@@ -13,6 +13,12 @@ import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
+import android.view.TextureView
+import android.widget.ImageView
+import android.widget.TextView
+import com.mx.smartsoftamerica.aplicacion.settings
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.nav_header_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,6 +37,10 @@ class MainActivity : AppCompatActivity() {
         }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
+        navView.getHeaderView(0).findViewById<TextView>(R.id.textViewNombre).text = settings.usuario
+        navView.getHeaderView(0).findViewById<TextView>(R.id.textViewCorreo).text = settings.usuario
+        Picasso.get().load("https://image.freepik.com/vector-gratis/perfil-avatar-hombre-icono-redondo_24640-14044.jpg")
+            .into(navView.getHeaderView(0).findViewById<ImageView>(R.id.imageViewPerfil))
         val navController = findNavController(R.id.nav_host_fragment)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
