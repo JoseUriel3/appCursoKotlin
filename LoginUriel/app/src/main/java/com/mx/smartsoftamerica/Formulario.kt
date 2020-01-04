@@ -34,6 +34,6 @@ class Formulario : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
         sexoSeleccionado = lista[position]
-        Toast.makeText(this, "Seleccionado: $sexoSeleccionado",Toast.LENGTH_LONG)
+        Toast.makeText(this, "Seleccionado: $sexoSeleccionado",Toast.LENGTH_LONG).show()
     }
 }

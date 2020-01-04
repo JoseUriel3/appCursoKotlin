@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModel
 import android.util.Patterns
 import androidx.core.content.ContextCompat
 import com.mx.smartsoftamerica.Bienvenido
+import com.mx.smartsoftamerica.MainActivity
 import com.mx.smartsoftamerica.data.LoginRepository
 import com.mx.smartsoftamerica.data.Result
 
@@ -31,7 +32,7 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
         if (result is Result.Success) {
             _loginResult.value =
                 LoginResult(success = LoggedInUserView(displayName = result.data.displayName))
-            var intent = Intent(context, Bienvenido::class.java)
+            var intent = Intent(context, MainActivity::class.java)
             intent.putExtra("correo",username)
             ContextCompat.startActivity(context,intent,null)
         } else {

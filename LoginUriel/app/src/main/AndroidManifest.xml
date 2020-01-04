@@ -10,8 +10,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Formulario"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".Formulario" />
         <activity android:name=".Bienvenido" />
+        <activity android:name=".Vista" />
         <activity
             android:name=".ui.login.LoginActivity"
             android:label="@string/app_name">
