@@ -40,4 +40,11 @@
         android:name="com.mx.smartsoftamerica.ui.send.SendFragment"
         android:label="@string/menu_send"
         tools:layout="@layout/fragment_send" />
+
+    <activity
+        android:id="@+id/act_lista"
+        android:name="com.mx.smartsoftamerica.Vista"
+        android:label="Lista"
+        tools:layout="@layout/activity_vista"/>
+
 </navigation>

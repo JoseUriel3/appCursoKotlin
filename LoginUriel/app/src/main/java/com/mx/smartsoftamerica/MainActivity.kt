@@ -40,6 +40,8 @@ class MainActivity : AppCompatActivity() {
         navView.getHeaderView(0).findViewById<TextView>(R.id.textViewNombre).text = settings.usuario
         navView.getHeaderView(0).findViewById<TextView>(R.id.textViewCorreo).text = settings.usuario
         Picasso.get().load("https://image.freepik.com/vector-gratis/perfil-avatar-hombre-icono-redondo_24640-14044.jpg")
+            .placeholder(R.drawable.ic_launcher_background)
+            .error(R.drawable.ic_launcher_background)
             .into(navView.getHeaderView(0).findViewById<ImageView>(R.id.imageViewPerfil))
         val navController = findNavController(R.id.nav_host_fragment)
         // Passing each menu ID as a set of Ids because each
